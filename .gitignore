@@ -1,0 +1,12 @@
+node_modules
+web/node_modules
+web/.next
+.next
+.data
+dist
+contract/target
+demo/last-run.json
+.env
+.env.local
+*.log
+.DS_Store

@@ -1,0 +1,35 @@
+{
+  "name": "nightfill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A dark pool for AI agents on NEAR. Built at NEAR HACKATHON.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "demo": "tsx src/demo/run.ts",
+    "engine": "tsx src/server/index.ts",
+    "mcp": "tsx src/mcp/server.ts",
+    "dev": "concurrently -n engine,web -c green,cyan \"npm run engine\" \"npm run web\"",
+    "web": "npm --prefix web run dev",
+    "contract:test": "cargo test --manifest-path contract/Cargo.toml",
+    "typecheck": "tsc --noEmit",
+    "verify-receipt": "tsx src/cli/verify.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "libsodium-wrappers": "^0.8.4",
+    "near-api-js": "^7.5.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/libsodium-wrappers": "^0.7.14",
+    "@types/node": "^26.6.6",
+    "concurrently": "^10.0.7",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

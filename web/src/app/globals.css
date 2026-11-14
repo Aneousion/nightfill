@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #101410;
+  --foreground: #efece3;
+  --card: #171c18;
+  --primary: #d6ff4a;
+  --primary-foreground: #14180a;
+  --muted: #232a24;
+  --muted-foreground: #a3aa9b;
+  --accent: #2a332c;
+  --border: #313a32;
+  --input: #313a32;
+  --ring: #d6ff4a;
+  --destructive: #ff7a45;
+  --amber: #e6b450;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-amber: var(--amber);
+  --font-sans: var(--font-fraunces);
+  --font-mono: var(--font-plex);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plex), ui-monospace, monospace;
+}
+
+.display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}

@@ -1,0 +1,21 @@
+[package]
+name = "nightfill"
+version = "0.1.0"
+edition = "2021"
+description = "Anchor Nightfill batch Merkle roots on NEAR. Built at NEAR HACKATHON."
+publish = false
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { version = "=5.5.0", features = ["unit-testing"] }
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
